@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --orange:hsl(26, 100%, 55%);
+    --pale-orage:hsl(25, 91%, 79%);
+    --very-vark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --gray-blue: hsl(220, 5%, 57%);
+    --light-grayish-blue: hsl(230, 11%, 89%);
+    --white: hsl(0, 0%, 100%);
+    --lighbox-bg: hsla(0, 0%, 0%, 0.75);
+}
+body{
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding: 1.5rem 8rem;
+}
+.header{
+    display: flex;
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+.header:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid var(--light-grayish-blue);
+    /* border-top: 1px solid #000; */
+}
+.icon-menu{
+    display: none;
+}
+.logo{
+    margin-right: 3rem;
+    display: flex;
+    align-items: center;
+}
+.nav-bar ul{
+    height: 100%;
+    display: flex;
+    gap: 1.5rem;
+}
+.nav-bar ul li a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: var(--grayish-blue);
+    font-size: 0.9rem;
+}
+.nav-bar ul li{
+    position: relative;
+}
+.nav-bar ul li a:hover{
+    color: var(--Dark-grayish-blue);
+}
+.nav-bar ul li a:hover:after{
+    content: '';
+    position: absolute;
+    bottom: -1.5rem;
+    z-index: 999;
+    border-top: 2px solid var(--orange);
+    width: 100%;
+}
+.cart-avatar{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.cart:hover{
+    cursor: pointer;
+}
+.cart svg path{
+    fill: var(--gray-blue);
+}
+.cart svg:hover path{
+    fill: var(--very-vark-blue);
+}
+.avatar{
+    height: 2.7rem;
+    cursor: pointer;
+}
+.avatar:hover img{
+    border: 2px solid var(--orange);
+    border-radius: 50%;
+}
+.avatar img{
+    height: 100%;
+    transition: border 0.2s;
+}
+
+.main{
+    padding: 3rem 2.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-images{
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.main-image svg{
+    display: none;
+}
+.main-image img{
+    width: 100%;
+    border-radius: 0.8rem;
+}
+.others-image{
+    display: flex;
+    justify-content: space-between;
+}
+.others-image img{
+    width: 5.2rem;
+    border-radius: 0.4rem;
+}
+.product-descriptions{
+    width: 29rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.title-company{
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 600;
+}
+.title-product{
+    font-size: 2.5rem;
+}
+.product-paragraph{
+    color: var(--grayish-blue);
+    padding: 1.5rem 0 0.7rem;
+}
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.current-price{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.discount-rate{
+    color: var(--orange);
+    font-weight: 600;
+}
+.previous-price{
+    margin-top: 0.8rem;
+    color: var(--grayish-blue);
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+.actions-cart{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+.quantity-products{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 0 1rem;
+}
+.quantity-products svg:hover path{
+    fill: var(--pale-orage);
+    cursor: pointer;
+}
+.btn-add-to-cart{
+    padding: 1rem 6.5rem;
+    background-color: var(--orange);
+    border-radius: 0.8rem;
+    color: var(--white);
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.btn-add-to-cart:hover{
+    background-color: var(--pale-orage);
+}
+.btn-add-to-cart svg path{
+    fill: var(--white);
+}
+
+
+.light-box-modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lighbox-bg);
+}
+.light-box-modal .product-images{
+    width: 27rem;
+    gap: 0.2rem;
+}
+
+.light-box-modal .others-image{
+    padding: 0 2rem;
+}
+.light-box-modal .others-image img{
+    width: 4.5rem;
+}
+.light-box-modal .main-image svg{
+    display: block;
+}
